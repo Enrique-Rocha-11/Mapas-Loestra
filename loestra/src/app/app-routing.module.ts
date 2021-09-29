@@ -8,16 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'ruta',
+    redirectTo: '', 
     pathMatch: 'full'
   },
   {
-    path: 'ruta',
+    path: 'ruta/:id',
     loadChildren: () => import('./pages/ruta/ruta.module').then( m => m.RutaPageModule)
   },
   {
-    path: 'mapa',
+    path: 'mapa/:usuarios',
     loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'marcadores',
+    loadChildren: () => import('./pages/marcadores/marcadores.module').then( m => m.MarcadoresPageModule)
   },
 ];
 

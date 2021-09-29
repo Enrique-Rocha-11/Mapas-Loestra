@@ -28,9 +28,57 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-#mapa-Ruta {
+ion-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mapa-Ruta,
+#mapa-rastreo {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
+}
+
+.marcador {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.marcador-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    border-bottom-right-radius: 1px;
+    .fondo {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        // background: url("https://loestra.iatich.com.mx/vistas/assets/images/proveedores/RAFAEL ROMERO LOPEZ/811.jpg");
+        background-position: center;
+        background-size: 38px 38px;
+        background-repeat: no-repeat;
+        transform: rotate(-45deg);
+        img {
+            border-radius: 25px;
+        }
+    }
+}
+
+.mapboxgl-popup-close-button {
+    border: none !important;
 }
